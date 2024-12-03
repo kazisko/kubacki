@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wycena Usług</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wycena Usług</h1>
+        <!-- Formularz dla klienta -->
+        <form id="wycenaForm">
+            <h2>Dane Klienta</h2>
+            <label for="nazwaFirmy">Nazwa firmy:</label>
+            <input type="text" id="nazwaFirmy" required>
+            
+            <label for="pracownicy">Liczba pracowników:</label>
+            <input type="number" id="pracownicy" required>
+
+            <label for="odleglosc">Odległość od firmy (w km):</label>
+            <input type="number" id="odleglosc" required>
+
+            <h2>Wybierz Usługi</h2>
+            <div id="uslugi">
+                <label><input type="checkbox" data-cena="500" data-vat="23"> Konsultacja IT (500 zł netto)</label><br>
+                <label><input type="checkbox" data-cena="400" data-vat="23"> Serwis sprzętu (400 zł netto)</label><br>
+                <label><input type="checkbox" data-cena="700" data-vat="23"> Szkolenie (700 zł netto)</label><br>
+            </div>
+
+            <button type="button" id="oblicz">Oblicz wycenę</button>
+        </form>
+
+        <!-- Wyniki -->
+        <div id="wynik" style="display: none;">
+            <h2>Wynik Wyceny</h2>
+            <p id="kosztNetto"></p>
+            <p id="kwotaVAT"></p>
+            <p id="kosztBrutto"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
