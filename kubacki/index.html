@@ -22,13 +22,15 @@
             <label for="odleglosc">Odległość od firmy (w km):</label>
             <input type="number" id="odleglosc" required>
 
+            <label><input type="checkbox" id="osie" onchange="window.location.replace('http://google.com')"> Czy znajdujesz się aktualnie w Osiu?</label><br>
+
             <h2>Wybierz Usługi</h2>
             <div id="uslugi">
                 <label><input type="checkbox" data-cena="500" data-vat="23"> Konsultacja IT (500 zł netto)</label><br>
                 <label><input type="checkbox" data-cena="400" data-vat="23"> Serwis sprzętu (400 zł netto)</label><br>
                 <label><input type="checkbox" data-cena="700" data-vat="23"> Szkolenie (700 zł netto)</label><br>
             </div>
-
+            
             <button type="button" id="oblicz">Oblicz wycenę</button>
         </form>
 
